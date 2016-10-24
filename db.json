@@ -6,19 +6,24 @@
       "name": "International Business Machine"
     },
     {
-      "id": 2,
       "code": "GOOG",
-      "name": "Google"
-    },
-    {
-      "id": 3,
-      "code": "AAPL",
-      "name": "Apple Inc."
+      "name": "Google",
+      "id": 2
     },
     {
       "code": "HPQ",
       "name": "Hawlett Packard",
       "id": 4
+    },
+    {
+      "code": "TSLA",
+      "name": "Tesla Motors",
+      "id": 5
+    },
+    {
+      "code": "AAPL",
+      "name": "Apple Inc.",
+      "id": 6
     }
   ]
 }

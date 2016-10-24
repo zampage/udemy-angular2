@@ -19,6 +19,25 @@ export class StockService{
       .catch( (error : any) => Observable.throw(error.toJSON().error || ' Server Error ') );
   }
 
+  createStock(newCode : string, newName : string) : Observable<any>{
+    return this.http.post('http://localhost:3000/stocks', {
+        code: newCode,
+        name: newName
+      })
+  }
+
+  updateStock(id : string, newCode, newName) : Observable<any>{
+    return this.http
+      .put('http://localhost:3000/stocks/' + id, {
+        code: newCode,
+        name: newName
+      })
+  }
+
+  deleteStock(id : string) : Observable<any>{
+    return this.http.delete('http://localhost:3000/stocks/' + id);
+  }
+
   getStocks() : string[]{
     return ['APPLE', 'IBM', 'GOOGLE', 'MICROSOFT'];
   }

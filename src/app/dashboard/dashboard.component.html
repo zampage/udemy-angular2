@@ -1,5 +1,36 @@
-<ul>
-  <li *ngFor="let stock of stocks">
-    {{stock.id}} | {{stock.code}} | {{stock.name}}
-  </li>
-</ul>
+<div *ngIf="updateEnabled" class="m-x-auto p-a-2 m-t-2">
+  Stock Code: <input #updateStockCode [value]="selectedStock.code"><br>
+  Stock Name: <input #updateStockName [value]="selectedStock.name"><br>
+  <button type="button" class="btn btn-warning" (click)="updateStock(updateStockCode, updateStockName)">UPDATE</button>
+</div>
+
+<div class="m-x-auto p-a-2">
+  <table class="table table-striped table-hover table-sm-center">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let stock of stocks">
+        <td>{{stock.id}}</td>
+        <td>{{stock.code}}</td>
+        <td>{{stock.name}}</td>
+        <td>
+          <button type="button" class="btn btn-warning" (click)="loadDetails(stock)">UPDATE</button>
+          <button type="button" class="btn btn-danger" (click)="deleteStock(stock.id)">DELETE</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr>
+
+<h2>Add Stock</h2>
+Stock Code: <input #newStockCode /><br>
+Stock Name: <input #newStockName /><br>
+<button type="button" class="btn btn-primary" (click)="createStock(newStockCode, newStockName)">CREATE</button>
