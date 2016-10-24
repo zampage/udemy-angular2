@@ -1,0 +1,24 @@
+{
+  "stocks": [
+    {
+      "id": 1,
+      "code": "IBM",
+      "name": "International Business Machine"
+    },
+    {
+      "id": 2,
+      "code": "GOOG",
+      "name": "Google"
+    },
+    {
+      "id": 3,
+      "code": "AAPL",
+      "name": "Apple Inc."
+    },
+    {
+      "code": "HPQ",
+      "name": "Hawlett Packard",
+      "id": 4
+    }
+  ]
+}
