@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { StockService } from '../stock.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { StockService } from '../stock.service';
 })
 export class DashboardComponent implements OnInit {
 
-  @Input() stocks : string[];
+  stocks : string[];
   updateEnabled = false;
   selectedStock;
 
